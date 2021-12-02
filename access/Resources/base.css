@@ -40,6 +40,28 @@ html{
 }
 
 /* slider run  */
+.slider_content-run-c1{
+    overflow: hidden;
+    width: 720px;
+    height: 235px;
+}
+
+.slider-run {
+    overflow-x: auto;
+}
+
+.slider-run::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+.slider-c1{
+    display: flex;
+    width: 7200px;
+    height: 100%;
+    transition: all linear 1s;
+}
+
 
 .slider-item{
     width: 800px;
@@ -128,7 +150,7 @@ html{
 }
 
 
-.owl-prev{
+/* .owl-prev{
     position: absolute;
     left: 0;
     font-size: 3rem !important;
@@ -174,5 +196,5 @@ html{
 
 .owl-dot.active span{
     background-color: #ee4d2d !important; 
-}
+} */
 

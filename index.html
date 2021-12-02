@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="./access/Resources/grid.css">
     <link rel="stylesheet" href="./access/icon/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="shortcut icon" href="./access/images/shopee-logo-2.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./access/OwlCarousel2-2.3.4 (1)/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"> -->
-    <!-- <link rel="stylesheet" href="./access/OwlCarousel2-2.3.4 (1)/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"> -->
     <title>Shoppe Fake</title>
 </head>
 
@@ -253,19 +251,21 @@
                 
                 <div class="grid wide">
                     <div class="slider_content-run row no-gutters ">
-                        <div class="slider-run l-8">
-                            <section class="slider owl-carousel owl-theme">
-                                <div class="slider-item slider-item-one"></div>
-                                <div class="slider-item slider-item-two"></div>
-                                <div class="slider-item slider-item-three"></div>
-                                <div class="slider-item slider-item-four"></div>
-                                <div class="slider-item slider-item-five"></div>
-                                <div class="slider-item slider-item-six"></div>
-                                <div class="slider-item slider-item-seven"></div>
-                                <div class="slider-item slider-item-eight"></div>
-                                <div class="slider-item slider-item-nine"></div>
-                                <div class="slider-item slider-item-ten"></div>
-                            </section>
+                        <div class="slider_content-run-c1">
+                            <div class="slider-run ">
+                                <section class="slider-c1 ">
+                                    <div class="slider-item slider-item-one"></div>
+                                    <div class="slider-item slider-item-two"></div>
+                                    <div class="slider-item slider-item-three"></div>
+                                    <div class="slider-item slider-item-four"></div>
+                                    <div class="slider-item slider-item-five"></div>
+                                    <div class="slider-item slider-item-six"></div>
+                                    <div class="slider-item slider-item-seven"></div>
+                                    <div class="slider-item slider-item-eight"></div>
+                                    <div class="slider-item slider-item-nine"></div>
+                                    <div class="slider-item slider-item-ten"></div>
+                                </section>
+                            </div>
                         </div>
     
                         <div class="slider-img l-4">
@@ -291,36 +291,25 @@
             </footer>
 
     </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <!-- <script src="./access/OwlCarousel2-2.3.4 (1)/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script> -->
+        
+    <script>
+        var SliderHead = document.querySelector('.slider-c1');
+        var x = -720;
 
-        <script>
-             $(document).ready(function(){
-            $(".owl-carousel").owlCarousel();
-        })
+        setInterval(() => {
+            SliderHead.style.transform = `translateX(${x}px)`;
+            
+            
+            if(x <= -6480)
+                x = 0;
 
-        $('.owl-carousel').owlCarousel({
-            lazyload:true,
-            loop:true,
-            margin:10,
-            autoplay:true,
-            autoplayTimeout:10000,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
-        })
-        </script>  
+                
+            else
+                x -= 720;
+
+        }, 5000);
 
         
-    
+    </script>
 </body>
 </html>
